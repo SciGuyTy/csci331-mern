@@ -7,8 +7,11 @@ const PORT = 3057;
  * @param {*} res The HTTP response object
  */
 const handleConn = (req, res) => {
+    // The body to be sent back in the response
+    const body = `<h1>Hello, Node.js!</h1><h3>Tyler Koon - q71j523</h3><p>Running Node server on port ${PORT}</h3>`
+
     res.writeHead(200, { "Content-Type": "text/html" });
-    res.write("");
+    res.write(body);
     res.end();
 }
 
